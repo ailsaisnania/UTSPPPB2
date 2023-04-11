@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tracker App</string>
+    <string name="title_activity_maps">ActivityMap</string>
+    <string name="start">Mulai</string>
+    <string name="nos">Jumlah Langkah</string>
+    <string name="duration">Total Durasi</string>
+    <string name="total_distance">Total Jarak</string>
+    <string name="change_language">Ubah Bahasa</string>
+    <string name="total_step_widget">Total Langkah</string>
+    <string name="duration_widget">Total Durasi</string>
+    <string name="distance_widget">Total Jarak</string>
+</resources>

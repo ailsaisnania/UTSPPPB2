@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tracker App</string>
+    <string name="title_activity_maps">マップアクティビティ</string>
+    <string name="start">始める</string>
+    <string name="nos">ステップ数</string>
+    <string name="duration">合計期間</string>
+    <string name="total_distance">総距離</string>
+    <string name="change_language">言語を変えてください</string>
+    <string name="total_step_widget">総歩数</string>
+    <string name="duration_widget">総所要時間</string>
+    <string name="distance_widget">総距離</string>
+</resources>

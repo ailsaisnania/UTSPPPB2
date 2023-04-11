@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Tracker App</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="running_app" translatable="false">Running Tracker App</string>
+    <string name="start">Start</string>
+    <string name="nos">Number of step</string>
+    <string name="duration">Total duration</string>
+    <string name="total_distance">Total distance</string>
+    <string name="change_language"> Change Language</string>
+    <string name="total_step_widget">Total steps</string>
+    <string name="duration_widget">Total Duration</string>
+    <string name="distance_widget">Total Distance</string>
+    <string name="appwidget_text" translatable="false">EXAMPLE</string>
+    <string name="add_widget" translatable="false">Add widget</string>
+    <string name="app_widget_description" translatable="false">This is an app widget description</string>
+</resources>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_12sdp"
+        map:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:layout_gravity="end"
+            android:id="@+id/change_language"
+            android:text="@string/change_language"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/running_app"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/start" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp">
+
+            <TextView
+                android:id="@+id/dumb_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nos"
+                android:textStyle="bold"
+                map:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dumb_pace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="@string/duration"
+                android:textStyle="bold"
+                map:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toBottomOf="@id/dumb_step" />
+
+            <TextView
+                android:id="@+id/dumb_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="@string/total_distance"
+                android:textStyle="bold"
+                map:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toBottomOf="@id/dumb_pace" />
+
+
+
+            <TextView
+                android:id="@+id/dumb_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:text=":"
+                android:textStyle="bold"
+                map:layout_constraintBottom_toBottomOf="@id/dumb_step"
+                map:layout_constraintStart_toEndOf="@id/dumb_step"
+                map:layout_constraintTop_toTopOf="@id/dumb_step" />
+
+            <TextView
+                android:id="@+id/dumb_point_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:text=":"
+                android:textStyle="bold"
+                map:layout_constraintBottom_toBottomOf="@id/dumb_distance"
+                map:layout_constraintStart_toEndOf="@id/dumb_step"
+                map:layout_constraintTop_toTopOf="@id/dumb_distance" />
+
+            <TextView
+                android:id="@+id/dumb_point_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:text=":"
+                android:textStyle="bold"
+                map:layout_constraintBottom_toBottomOf="@id/dumb_pace"
+                map:layout_constraintStart_toEndOf="@id/dumb_step"
+                map:layout_constraintTop_toTopOf="@id/dumb_pace" />
+
+            <TextView
+                android:id="@+id/tv_number_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:textStyle="bold"
+                map:layout_constraintBottom_toBottomOf="@id/dumb_step"
+                map:layout_constraintStart_toEndOf="@id/dumb_point"
+                map:layout_constraintTop_toTopOf="@id/dumb_step"
+                tools:text="12 Step" />
+
+            <TextView
+                android:id="@+id/tv_total_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:textStyle="bold"
+                map:layout_constraintBottom_toBottomOf="@id/dumb_distance"
+                map:layout_constraintStart_toEndOf="@id/dumb_point"
+                map:layout_constraintTop_toTopOf="@id/dumb_distance"
+                tools:text="12 m" />
+
+            <TextView
+                android:id="@+id/tv_average_pace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:textStyle="bold"
+                map:layout_constraintBottom_toBottomOf="@id/dumb_pace"
+                map:layout_constraintStart_toEndOf="@id/dumb_point"
+                map:layout_constraintTop_toTopOf="@id/dumb_pace"
+                tools:text="12 s" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintTop_toBottomOf="@id/layout_top"
+        tools:context=".MapsActivity" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
